@@ -17,7 +17,7 @@
 
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <form class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
+      <form class="login" method="post" action="{% url 'socialaccount_login' %}">
         {% csrf_token %}
         {{ form.as_p }}
         {% if redirect_field_value %}
