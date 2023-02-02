@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -58,18 +58,8 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-SITE_ID = 2
-
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
-AUTHENTICATION_BACKENDS = (
-    "allauth.account.auth_backends.AuthenticationBackend",
-)
-
-ACCOUNT_EMAIL_VERIFICATION = "none"
-ACCOUNT_LOGOUT_ON_GET = True
-
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
